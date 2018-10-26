@@ -26,7 +26,7 @@ class CreateHerramientasAndRelatedTables extends Migration
             $table->increments('id');
             $table->integer('herramienta_id')->unsigned();
             $table->integer('area_id')->unsigned(); // Maquinaria | Herramienta
-            $table->integer('user_id')->unsigned(); // Maquinaria | Herramienta
+            $table->integer('trabajador_id')->unsigned(); // Maquinaria | Herramienta
             $table->string('cantidad');
             $table->string('unidad_de_medida');
 						$table->timestamp('fecha_alta')->nullable();
@@ -38,14 +38,14 @@ class CreateHerramientasAndRelatedTables extends Migration
 								->onUpdate('cascade')->onDelete('cascade');
 						$table->foreign('area_id')->references('id')->on('areas')
 								->onUpdate('cascade')->onDelete('cascade');
-						$table->foreign('user_id')->references('id')->on('users')
+						$table->foreign('trabajador_id')->references('id')->on('users')
 								->onUpdate('cascade')->onDelete('cascade');
 
         });
         Schema::create('registro_combustible', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('herramienta_id')->unsigned();
-            $table->integer('user_id')->unsigned(); // Maquinaria | Herramienta
+            $table->integer('trabajador_id')->unsigned();
             $table->string('litros_cargados');
             $table->string('costo_litro');
 						$table->string('odometro_u_horas');
@@ -55,14 +55,14 @@ class CreateHerramientasAndRelatedTables extends Migration
 
 						$table->foreign('herramienta_id')->references('id')->on('catalogo_herramientas_y_maquinaria')
 								->onUpdate('cascade')->onDelete('cascade');
-						$table->foreign('user_id')->references('id')->on('users')
+						$table->foreign('trabajador_id')->references('id')->on('users')
 								->onUpdate('cascade')->onDelete('cascade');
 
         });
         Schema::create('mantenimiento_y_reparaciones', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('herramienta_id')->unsigned();
-            $table->integer('user_id')->unsigned(); // Maquinaria | Herramienta
+            $table->integer('trabajador_id')->unsigned(); // Maquinaria | Herramienta
             $table->string('mantenimiento_o_reparacion');
             $table->string('descripcion_mantenimiento_o_reparacion');
 						$table->string('costo_total');
@@ -70,9 +70,9 @@ class CreateHerramientasAndRelatedTables extends Migration
 						$table->string('notas');
             $table->timestamps();
 
-						$table->foreign('herramineta_id')->references('id')->on('catalogo_herramientas_y_maquinaria')
+						$table->foreign('herramienta_id')->references('id')->on('catalogo_herramientas_y_maquinaria')
 								->onUpdate('cascade')->onDelete('cascade');
-						$table->foreign('user_id')->references('id')->on('users')
+						$table->foreign('trabajador_id')->references('id')->on('users')
 								->onUpdate('cascade')->onDelete('cascade');
 
         });

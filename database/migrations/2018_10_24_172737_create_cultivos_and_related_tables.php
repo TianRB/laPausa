@@ -77,6 +77,27 @@ class CreateCultivosAndRelatedTables extends Migration
             $table->string('nombre');
             $table->timestamps();
         });
+        Schema::create('areas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('trabajador_id');
+            $table->json('trabajadores_aux');
+            $table->integer('numero_biocamas');
+            $table->string('total_superficie_productiva');
+            $table->timestamps();
+        });
+        Schema::create('biocamas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre');
+            $table->integer('area_id')->unsigned();
+            $table->string('largo');
+            $table->string('ancho');
+            $table->string('ancho_pasillos_biocama');
+            $table->timestamps();
+
+						$table->foreign('area_id')->references('id')->on('areas')
+								->onUpdate('cascade')->onDelete('cascade');
+        });
         Schema::create('grupos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
@@ -195,12 +216,13 @@ class CreateCultivosAndRelatedTables extends Migration
         Schema::dropIfExists('cultivo_resistencia');
         Schema::dropIfExists('cultivo_enfermedad');
 
-				Schema::dropIfExists('cultivos');
 				Schema::dropIfExists('familias');
 				Schema::dropIfExists('proveedores');
-				Schema::dropIfExists('enfermedades_y_plagas');
 				Schema::dropIfExists('tipos_cultivo');
 				Schema::dropIfExists('tipos_cosecha');
 				Schema::dropIfExists('grupos');
+				Schema::dropIfExists('enfermedades_y_plagas');
+				Schema::dropIfExists('cultivos');
+
     }
 }
