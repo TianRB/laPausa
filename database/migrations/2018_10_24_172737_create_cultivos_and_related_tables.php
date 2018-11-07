@@ -48,10 +48,13 @@ class CreateCultivosAndRelatedTables extends Migration
         Schema::create('areas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('trabajador_id');
+            $table->integer('trabajador_id')->unsigned();
             $table->json('trabajadores_aux');
             $table->integer('numero_biocamas');
             $table->string('total_superficie_productiva');
+
+            $table->foreign('trabajador_id')->references('id')->on('users')
+      								->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
         Schema::create('biocamas', function (Blueprint $table) {
