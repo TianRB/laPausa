@@ -7,10 +7,10 @@ use Illuminate\Database\Migrations\Migration;
 class CreateTrabajadoresTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('trabajadores', function (Blueprint $table) {
@@ -36,21 +36,21 @@ class CreateTrabajadoresTable extends Migration
             $table->string('vacaciones');
             $table->string('bonos');
             $table->timestamps();
-
-						$table->foreign('user_id')->references('id')->on('users')
-								->onUpdate('cascade')->onDelete('cascade');
+            
+            $table->foreign('user_id')->references('id')->on('users')
+            ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
-			Schema::disableForeignKeyConstraints(); // Elimina constrains para que no se queje
+        Schema::disableForeignKeyConstraints(); // Elimina constrains para que no se queje
         Schema::dropIfExists('trabajadores');
-			Schema::enableForeignKeyConstraints(); // Activa constrains para que no se queje
+        Schema::enableForeignKeyConstraints(); // Activa constrains para que no se queje
     }
 }
