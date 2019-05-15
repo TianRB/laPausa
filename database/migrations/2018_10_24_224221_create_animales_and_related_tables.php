@@ -7,10 +7,10 @@ use Illuminate\Database\Migrations\Migration;
 class CreateAnimalesAndRelatedTables extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('catalogo_animales', function (Blueprint $table) {
@@ -30,7 +30,9 @@ class CreateAnimalesAndRelatedTables extends Migration
             $table->increments('id');
             $table->integer('animal_id')->unsigned();
             $table->integer('trabajador_id')->unsigned();
-            $table->string('nombre');
+            $table->string('name');
+            $table->string('display_name');
+            $table->string('description');
             $table->string('sexo');
             $table->string('fecha_nac');
             $table->string('padres');
@@ -46,23 +48,23 @@ class CreateAnimalesAndRelatedTables extends Migration
             $table->string('vacunas');
             $table->string('notas');
             $table->timestamps();
-
-						$table->foreign('animal_id')->references('id')->on('catalogo_animales')
-								->onUpdate('cascade')->onDelete('cascade');
-						$table->foreign('trabajador_id')->references('id')->on('users')
-								->onUpdate('cascade')->onDelete('cascade');
-
+            
+            $table->foreign('animal_id')->references('id')->on('catalogo_animales')
+            ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('trabajador_id')->references('id')->on('users')
+            ->onUpdate('cascade')->onDelete('cascade');
+            
         });
     }
-
+    
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
         Schema::dropIfExists('animales');
-				Schema::dropIfExists('catalogo_animales');
+        Schema::dropIfExists('catalogo_animales');
     }
 }

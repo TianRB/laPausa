@@ -15,7 +15,9 @@ class CreateHerramientasAndRelatedTables extends Migration
 	{
 		Schema::create('catalogo_herramientas_y_maquinaria', function (Blueprint $table) {
 			$table->increments('id');
-			$table->string('nombre');
+			$table->string('name');
+			$table->string('display_name');
+			$table->string('description');
 			$table->string('tipo'); // Maquinaria | Herramienta
 			$table->string('marca');
 			$table->string('modelo');
@@ -33,14 +35,14 @@ class CreateHerramientasAndRelatedTables extends Migration
 			$table->timestamp('fecha_baja')->nullable();
 			$table->string('notas');
 			$table->timestamps();
-
+			
 			$table->foreign('herramienta_id')->references('id')->on('catalogo_herramientas_y_maquinaria')
 			->onUpdate('cascade')->onDelete('cascade');
 			$table->foreign('area_id')->references('id')->on('areas')
 			->onUpdate('cascade')->onDelete('cascade');
 			$table->foreign('trabajador_id')->references('id')->on('users')
 			->onUpdate('cascade')->onDelete('cascade');
-
+			
 		});
 		Schema::create('registro_combustible', function (Blueprint $table) {
 			$table->increments('id');
@@ -52,12 +54,12 @@ class CreateHerramientasAndRelatedTables extends Migration
 			$table->timestamp('fecha');
 			$table->string('notas');
 			$table->timestamps();
-
+			
 			$table->foreign('herramienta_id')->references('id')->on('catalogo_herramientas_y_maquinaria')
 			->onUpdate('cascade')->onDelete('cascade');
 			$table->foreign('trabajador_id')->references('id')->on('users')
 			->onUpdate('cascade')->onDelete('cascade');
-
+			
 		});
 		Schema::create('mantenimiento_y_reparaciones', function (Blueprint $table) {
 			$table->increments('id');
@@ -69,14 +71,14 @@ class CreateHerramientasAndRelatedTables extends Migration
 			$table->timestamp('fecha');
 			$table->string('notas');
 			$table->timestamps();
-
+			
 			$table->foreign('herramienta_id')->references('id')->on('catalogo_herramientas_y_maquinaria')
 			->onUpdate('cascade')->onDelete('cascade');
 			$table->foreign('trabajador_id')->references('id')->on('users')
 			->onUpdate('cascade')->onDelete('cascade');
 		});
 	}
-
+	
 	/**
 	* Reverse the migrations.
 	*
@@ -90,7 +92,7 @@ class CreateHerramientasAndRelatedTables extends Migration
 		Schema::dropIfExists('catalogo_herramientas_y_maquinaria');
 		Schema::dropIfExists('mantenimiento_y_reparaciones');
 		Schema::enableForeignKeyConstraints(); // Activa constrains para que no se queje
-
-
+		
+		
 	}
 }
