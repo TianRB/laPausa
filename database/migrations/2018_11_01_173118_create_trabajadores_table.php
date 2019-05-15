@@ -17,7 +17,9 @@ class CreateTrabajadoresTable extends Migration
             $table->increments('id');
             $table->string('alias');
             $table->integer('user_id')->unsigned();
-            $table->string('nombre');
+            $table->string('name');
+            $table->string('display_name');
+            $table->string('description');
             $table->string('apellido_paterno');
             $table->string('apellido_materno');
             $table->date('fecha_nacimiento');
@@ -41,7 +43,7 @@ class CreateTrabajadoresTable extends Migration
             ->onUpdate('cascade')->onDelete('cascade');
         });
     }
-
+    
     /**
     * Reverse the migrations.
     *

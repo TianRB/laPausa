@@ -15,7 +15,9 @@ class CreateInsumosAndRelatedTables extends Migration
   {
     Schema::create('catalogo_insumos', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('nombre');
+      $table->string('name');
+      $table->string('display_name');
+      $table->string('description');
       $table->string('unidad_medida');
       $table->string('procedimientos');
       $table->json('datos');
