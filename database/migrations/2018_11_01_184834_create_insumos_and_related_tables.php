@@ -17,7 +17,7 @@ class CreateInsumosAndRelatedTables extends Migration
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->string('unidad_medida');
       $table->string('procedimientos');
       $table->json('datos');

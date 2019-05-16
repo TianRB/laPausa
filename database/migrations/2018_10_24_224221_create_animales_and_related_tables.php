@@ -32,7 +32,7 @@ class CreateAnimalesAndRelatedTables extends Migration
             $table->integer('trabajador_id')->unsigned();
             $table->string('name');
             $table->string('display_name');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('sexo');
             $table->string('fecha_nac');
             $table->string('padres');

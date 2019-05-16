@@ -17,35 +17,35 @@ class CreateCultivosAndRelatedTables extends Migration
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('familias', function (Blueprint $table) {
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('tipos_cosecha', function (Blueprint $table) {
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('tipos_siembra', function (Blueprint $table) {
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('proveedores', function (Blueprint $table) {
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->string('direccion');
       $table->string('cp');
       $table->timestamps();
@@ -54,14 +54,14 @@ class CreateCultivosAndRelatedTables extends Migration
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('areas', function (Blueprint $table) {
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->integer('trabajador_id')->unsigned();
       $table->json('trabajadores_aux');
       $table->integer('numero_biocamas');
@@ -75,7 +75,7 @@ class CreateCultivosAndRelatedTables extends Migration
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->integer('area_id')->unsigned();
       $table->string('largo');
       $table->string('ancho');
@@ -89,7 +89,7 @@ class CreateCultivosAndRelatedTables extends Migration
       $table->increments('id');
       $table->string('name');
       $table->string('display_name');
-      $table->string('description');
+      $table->string('description')->nullable();
       $table->string('distancia_entre_arboles');
       $table->string('rango_de_edad');
       $table->integer('enfermedades_o_plagas')->unsigned();
