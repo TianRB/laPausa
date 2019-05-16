@@ -9,12 +9,13 @@
 
                 <div class="panel-body">
                     @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
                     @endif
-
-                    You are logged in!
+                    <ul>
+                        <li><a href="{{ route('tipos_cultivo.index') }}">Tipos Cultivo</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
