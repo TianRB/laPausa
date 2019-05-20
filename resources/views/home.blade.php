@@ -15,6 +15,7 @@
                     @endif
                     <ul>
                         <li><a href="{{ route('tipos_cultivo.index') }}">Tipos Cultivo</a></li>
+                        <li><a href="{{ route('familias.index') }}">Familias</a></li>
                     </ul>
                 </div>
             </div>

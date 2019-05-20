@@ -11,5 +11,6 @@
 Route::prefix('admin')->group(function () {
   Route::resources([
     'tipos_cultivo' => 'TipoCultivoController',
+    'familias' => 'FamiliaController',
   ]);
 });
