@@ -16,6 +16,7 @@
                     <ul>
                         <li><a href="{{ route('tipos_cultivo.index') }}">Tipos Cultivo</a></li>
                         <li><a href="{{ route('familias.index') }}">Familias</a></li>
+                        <li><a href="{{ route('tipos_cosecha.index') }}">Tipos de Cosecha</a></li>
                     </ul>
                 </div>
             </div>
