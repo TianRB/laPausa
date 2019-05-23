@@ -14,5 +14,6 @@ Route::prefix('admin')->group(function () {
     'tipos_cultivo' => 'TipoCultivoController',
     'familias' => 'FamiliaController',
     'tipos_cosecha' => 'TipoCosechaController',
+    'tipos_siembra' => 'TipoSiembraController',
   ]);
 });
