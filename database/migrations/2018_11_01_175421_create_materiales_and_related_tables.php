@@ -15,7 +15,7 @@ class CreateMaterialesAndRelatedTables extends Migration
   {
     Schema::create('catalogo_materiales', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->string('marca');
