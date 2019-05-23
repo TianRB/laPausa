@@ -15,35 +15,35 @@ class CreateCultivosAndRelatedTables extends Migration
   {
     Schema::create('tipos_cultivo', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('familias', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('tipos_cosecha', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('tipos_siembra', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('proveedores', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->string('direccion');
@@ -52,14 +52,14 @@ class CreateCultivosAndRelatedTables extends Migration
     });
     Schema::create('enfermedades_y_plagas', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->timestamps();
     });
     Schema::create('areas', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->integer('trabajador_id')->unsigned();
@@ -73,7 +73,7 @@ class CreateCultivosAndRelatedTables extends Migration
     });
     Schema::create('biocamas', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->integer('area_id')->unsigned();
@@ -87,7 +87,7 @@ class CreateCultivosAndRelatedTables extends Migration
     });
     Schema::create('grupos', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->string('name')->nullable();
       $table->string('display_name');
       $table->string('description')->nullable();
       $table->string('distancia_entre_arboles');
