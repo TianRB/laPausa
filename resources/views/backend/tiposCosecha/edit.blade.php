@@ -16,15 +16,15 @@
           <p>Edit Tipos de Cosecha</p>
           <a href=" {{ route('tipos_cosecha.index')}} ">index</a>
           
-          <form action="{{ route('tipos_cosecha.update', $TipoCosecha->id) }}" method="post">
+          <form action="{{ route('tipos_cosecha.update', $tipoCosecha->id) }}" method="post">
             {{ csrf_field() }}
             <input type="hidden" name="_method" value="PUT" />
 
             <label for="display_name">display_name</label>
-            <input type="text" name="display_name" value="{{ $TipoCosecha->display_name }}">
+            <input type="text" name="display_name" value="{{ $tipoCosecha->display_name }}">
 
             <label for="description">description (optional)</label>
-            <input type="text" name="description" value="{{ $TipoCosecha->description }}">
+            <input type="text" name="description" value="{{ $tipoCosecha->description }}">
 
             <input type="submit" value="submit">
           </form>

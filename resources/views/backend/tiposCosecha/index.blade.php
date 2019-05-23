@@ -16,7 +16,7 @@
           <p>Index Tipos de Cosecha</p>
           <a href=" {{ route('tipos_cosecha.create')}} ">create</a>
           <ul>
-            @forelse ($TiposCosecha as $tc)
+            @forelse ($tiposCosecha as $tc)
             {{-- var_dump($tc) --}}
             <p>{{ $tc->display_name }}</p>
             <a href="{{ route('tipos_cosecha.show', $tc->id) }}">show</a>

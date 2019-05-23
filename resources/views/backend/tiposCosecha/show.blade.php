@@ -16,10 +16,10 @@
           <p>show Tipos de Cosecha</p>
           <a href=" {{ route('tipos_cosecha.index')}} ">index</a>
           <ul>
-            <p>{{ $TipoCosecha->display_name }}</p>
-            <a href="{{ route('tipos_cosecha.show', $TipoCosecha->id) }}">show</a>
-            <a href="{{ route('tipos_cosecha.edit', $TipoCosecha->id) }}">edit</a>
-            <form action="{{ route('tipos_cosecha.destroy', ['id' => $TipoCosecha->id]) }}" method="POST" class="no-margin">
+            <p>{{ $tipoCosecha->display_name }}</p>
+            <a href="{{ route('tipos_cosecha.show', $tipoCosecha->id) }}">show</a>
+            <a href="{{ route('tipos_cosecha.edit', $tipoCosecha->id) }}">edit</a>
+            <form action="{{ route('tipos_cosecha.destroy', ['id' => $tipoCosecha->id]) }}" method="POST" class="no-margin">
               {{ csrf_field() }}
               <input type="hidden" name="_method" value="delete" />
               <button type="submit" class="btn btn-danger"><i class="fa fa-trash">delete</i></button>

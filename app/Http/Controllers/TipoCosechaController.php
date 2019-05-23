@@ -12,8 +12,8 @@ class TipoCosechaController extends Controller
     
     private $prefix = 'tipos_cosecha.'; // Para Rutas
     private $viewPrefix = 'backend.tiposCosecha.'; // Para Vistas
-    private $modelSingular = 'TipoCosecha'; // Variable enviada a vistas con un modelo
-    private $modelPlural = 'TiposCosecha'; // Variable enviada a vistas con varios modelos
+    private $modelSingular = 'tipoCosecha'; // Variable enviada a vistas con un modelo
+    private $modelPlural = 'tiposCosecha'; // Variable enviada a vistas con varios modelos
     
     public function __construct(){
         $this->middleware('auth');
