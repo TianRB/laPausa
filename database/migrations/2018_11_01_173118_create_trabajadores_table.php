@@ -17,7 +17,7 @@ class CreateTrabajadoresTable extends Migration
             $table->increments('id');
             $table->string('alias');
             $table->integer('user_id')->unsigned();
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('display_name');
             $table->string('description')->nullable();
             $table->string('apellido_paterno');

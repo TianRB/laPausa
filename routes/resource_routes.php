@@ -17,5 +17,6 @@ Route::prefix('admin')->group(function () {
     'tipos_siembra' => 'TipoSiembraController',
     'proveedores' => 'ProveedorController',
     'enfermedades_y_plagas' => 'EnfermedadPlagaController',
+    'areas' => 'AreaController',
   ]);
 });

@@ -20,6 +20,7 @@
                         <li><a href="{{ route('tipos_siembra.index') }}">Tipos de Siembra</a></li>
                         <li><a href="{{ route('proveedores.index') }}">Proveedores</a></li>
                         <li><a href="{{ route('enfermedades_y_plagas.index') }}">Enfermedades y plagas</a></li>
+                        <li><a href="{{ route('areas.index') }}">Areas</a></li>
                     </ul>
                 </div>
             </div>
