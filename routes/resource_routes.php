@@ -18,5 +18,6 @@ Route::prefix('admin')->group(function () {
     'proveedores' => 'ProveedorController',
     'enfermedades_y_plagas' => 'EnfermedadPlagaController',
     'areas' => 'AreaController',
+    'biocamas' => 'BiocamaController',
   ]);
 });
