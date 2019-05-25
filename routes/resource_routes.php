@@ -5,7 +5,7 @@
 | Resource Routes
 |--------------------------------------------------------------------------
 |
-| Rutas para resources de la aplicación
+| Rutas para recursos de la aplicación
 |
 */
 
@@ -19,5 +19,6 @@ Route::prefix('admin')->group(function () {
     'enfermedades_y_plagas' => 'EnfermedadPlagaController',
     'areas' => 'AreaController',
     'biocamas' => 'BiocamaController',
+    'grupos' => 'GrupoController',
   ]);
 });

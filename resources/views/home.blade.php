@@ -22,6 +22,7 @@
                         <li><a href="{{ route('enfermedades_y_plagas.index') }}">Enfermedades y plagas</a></li>
                         <li><a href="{{ route('areas.index') }}">Areas</a></li>
                         <li><a href="{{ route('biocamas.index') }}">Biocamas</a></li>
+                        <li><a href="{{ route('grupos.index') }}">Grupos</a></li>
                     </ul>
                 </div>
             </div>
