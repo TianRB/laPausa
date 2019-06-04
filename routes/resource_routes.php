@@ -20,5 +20,6 @@ Route::prefix('admin')->group(function () {
     'areas' => 'AreaController',
     'biocamas' => 'BiocamaController',
     'grupos' => 'GrupoController',
+    'cultivos' => 'CultivoController',
   ]);
 });
