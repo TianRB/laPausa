@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use App\Models\Familia;
+use App\Models\Proveedor;
+use App\Models\Grupo;
+use App\Models\EnfermedadPlaga;
 use App\Models\Cultivo;
 use Validator;
 
@@ -34,7 +38,12 @@ class CultivoController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function create(){
-        return view($this->viewPrefix.'create');
+        $familia = Familia::all();
+        $proveedor = Proveedor::all();
+        $grupo = Grupo::all();
+        $enfermedadPlaga = EnfermedadPlaga::all();
+
+        return view($this->viewPrefix.'create', ['familia' => $familia, 'proveedor' => $proveedor, 'grupo' => $grupo, 'enfermedadPlagas' => $enfermedadPlaga]);
     }
     
     /**
@@ -61,7 +70,7 @@ class CultivoController extends Controller
         } else {
             $m = new Cultivo;
             $m->fill($request->all());
-            
+
             $m->save();
             return redirect()->route($this->prefix.'index');
         }
@@ -84,7 +93,12 @@ class CultivoController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function edit($id){
-        return view($this->viewPrefix.'edit', [$this->modelSingular => Cultivo::find($id)]);
+        $familia = Familia::all();
+        $proveedor = Proveedor::all();
+        $grupo = Grupo::all();
+        $enfermedadPlaga = EnfermedadPlaga::all();
+
+        return view($this->viewPrefix.'edit', [$this->modelSingular => Cultivo::find($id), 'familia' => $familia, 'proveedor' => $proveedor, 'grupo' => $grupo, 'enfermedadPlagas' => $enfermedadPlaga]);
     }
     
     /**

@@ -112,6 +112,21 @@
             <label for="tipo_charola">tipo_charola</label>
             <input type="text" name="tipo_charola" value="{{ old('tipo_charola') }}">
 
+            <label for="familia">familia</label>
+            <input type="text" name="familia" value="{{ old('familia') }}">
+
+            <label for="proveedor">proveedor</label>
+            <input type="text" name="proveedor" value="{{ old('proveedor') }}">
+
+            <label for="grupo">grupo</label>
+            <input type="text" name="grupo" value="{{ old('grupo') }}">
+
+            <label for="resistencias">resistencias</label>
+            <input type="text" name="resistencias" value="{{ old('resistencias') }}">
+
+            <label for="enfermedades">enfermedades</label>
+            <input type="text" name="enfermedades" value="{{ old('enfermedades') }}">
+
             <input type="submit" value="submit">
           </form>
 
