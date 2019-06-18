@@ -21,5 +21,6 @@ Route::prefix('admin')->group(function () {
     'biocamas' => 'BiocamaController',
     'grupos' => 'GrupoController',
     'cultivos' => 'CultivoController',
+    'catalogo_animales' => 'CatalogoAnimalController',
   ]);
 });

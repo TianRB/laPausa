@@ -24,6 +24,7 @@
                         <li><a href="{{ route('biocamas.index') }}">Biocamas</a></li>
                         <li><a href="{{ route('grupos.index') }}">Grupos</a></li>
                         <li><a href="{{ route('cultivos.index') }}">Cultivos</a></li>
+                        <li><a href="{{ route('catalogo_animales.index') }}">Catalogo de Animales</a></li>
                     </ul>
                 </div>
             </div>
