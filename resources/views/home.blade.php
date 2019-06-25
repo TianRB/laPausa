@@ -26,6 +26,7 @@
                         <li><a href="{{ route('cultivos.index') }}">Cultivos</a></li>
                         <li><a href="{{ route('catalogo_animales.index') }}">Catalogo de Animales</a></li>
                         <li><a href="{{ route('animales.index') }}">Animales</a></li>
+                        <li><a href="{{ route('cat_herr_maq.index') }}">Catalogo Herramienta y Maquinaria</a></li>
                     </ul>
                 </div>
             </div>
