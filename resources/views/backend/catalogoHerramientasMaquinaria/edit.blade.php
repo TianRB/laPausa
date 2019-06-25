@@ -13,7 +13,7 @@
             {{ session('status') }}
           </div>
           @endif
-          <p>Edit Animales</p>
+          <p>Edit cat herramienta maquinaria</p>
           <a href=" {{ route('cat_herr_maq.index')}} ">index</a>
           
           <form action="{{ route('cat_herr_maq.update', $herramientaMaquinaria->id) }}" method="post">
