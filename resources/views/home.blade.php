@@ -25,6 +25,7 @@
                         <li><a href="{{ route('grupos.index') }}">Grupos</a></li>
                         <li><a href="{{ route('cultivos.index') }}">Cultivos</a></li>
                         <li><a href="{{ route('catalogo_animales.index') }}">Catalogo de Animales</a></li>
+                        <li><a href="{{ route('animales.index') }}">Animales</a></li>
                     </ul>
                 </div>
             </div>
