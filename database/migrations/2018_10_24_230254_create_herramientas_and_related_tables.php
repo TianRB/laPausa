@@ -27,8 +27,8 @@ class CreateHerramientasAndRelatedTables extends Migration
 		Schema::create('herramientas_y_maquinaria', function (Blueprint $table) {
 			$table->increments('id');
 			$table->integer('herramienta_id')->unsigned();
-			$table->integer('area_id')->unsigned(); // Maquinaria | Herramienta
-			$table->integer('trabajador_id')->unsigned(); // Maquinaria | Herramienta
+			$table->integer('area_id')->unsigned();
+			$table->integer('trabajador_id')->unsigned()->nullable();
 			$table->string('cantidad');
 			$table->string('unidad_de_medida');
 			$table->timestamp('fecha_alta')->nullable();

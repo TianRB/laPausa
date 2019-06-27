@@ -24,5 +24,6 @@ Route::prefix('admin')->group(function () {
     'catalogo_animales' => 'CatalogoAnimalController',
     'animales' => 'AnimalController',
     'cat_herr_maq' => 'CatalogoHerramientaMaquinariaController',
+    'herr_maq' => 'HerramientaMaquinariaController',
   ]);
 });
