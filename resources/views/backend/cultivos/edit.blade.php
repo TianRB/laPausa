@@ -112,6 +112,20 @@
             
             <label for="tipo_charola">tipo_charola</label>
             <input type="text" name="tipo_charola" value="{{ $cultivo->tipo_charola }}">
+            <label for="familia">familia</label>
+            <input type="text" name="familia" value="{{ $cultivo->familia }}">
+            
+            <label for="proveedor">proveedor</label>
+            <input type="text" name="proveedor" value="{{ $cultivo->proveedor }}">
+            
+            <label for="grupo">grupo</label>
+            <input type="text" name="grupo" value="{{ $cultivo->grupo }}">
+            
+            <label for="resistencias">resistencias</label>
+            <input type="text" name="resistencias" value="{{ $cultivo->resistencias }}">
+            
+            <label for="enfermedades">enfermedades</label>
+            <input type="text" name="enfermedades" value="{{ $cultivo->enfermedades }}">
 
             <input type="submit" value="submit">
           </form>

@@ -24,6 +24,11 @@
                         <li><a href="{{ route('biocamas.index') }}">Biocamas</a></li>
                         <li><a href="{{ route('grupos.index') }}">Grupos</a></li>
                         <li><a href="{{ route('cultivos.index') }}">Cultivos</a></li>
+                        <li><a href="{{ route('catalogo_animales.index') }}">Catalogo de Animales</a></li>
+                        <li><a href="{{ route('animales.index') }}">Animales</a></li>
+                        <li><a href="{{ route('cat_herr_maq.index') }}">Catalogo Herramienta y Maquinaria</a></li>
+                        <li><a href="{{ route('herr_maq.index') }}">Herramienta y Maquinaria</a></li>
+                        <li><a href="{{ route('registro_combustible.index') }}">Registro Combustible</a></li>
                     </ul>
                 </div>
             </div>
