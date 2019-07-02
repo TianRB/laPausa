@@ -29,6 +29,7 @@
                         <li><a href="{{ route('cat_herr_maq.index') }}">Catalogo Herramienta y Maquinaria</a></li>
                         <li><a href="{{ route('herr_maq.index') }}">Herramienta y Maquinaria</a></li>
                         <li><a href="{{ route('registro_combustible.index') }}">Registro Combustible</a></li>
+                        <li><a href="{{ route('mantenimiento_y_reparaciones.index') }}">Mantenimiento y Reparaciones</a></li>
                     </ul>
                 </div>
             </div>

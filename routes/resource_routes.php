@@ -26,5 +26,6 @@ Route::prefix('admin')->group(function () {
     'cat_herr_maq' => 'CatalogoHerramientaMaquinariaController',
     'herr_maq' => 'HerramientaMaquinariaController',
     'registro_combustible' => 'RegistroCombustibleController',
+    'mantenimiento_y_reparaciones' => 'MantenimientoReparacionController',
   ]);
 });
