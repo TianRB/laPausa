@@ -30,6 +30,7 @@
                         <li><a href="{{ route('herr_maq.index') }}">Herramienta y Maquinaria</a></li>
                         <li><a href="{{ route('registro_combustible.index') }}">Registro Combustible</a></li>
                         <li><a href="{{ route('mantenimiento_y_reparaciones.index') }}">Mantenimiento y Reparaciones</a></li>
+                        <li><a href="{{ route('trabajadores.index') }}">Trabajadores</a></li>
                     </ul>
                 </div>
             </div>
