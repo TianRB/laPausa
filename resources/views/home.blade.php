@@ -32,6 +32,7 @@
                         <li><a href="{{ route('mantenimiento_y_reparaciones.index') }}">Mantenimiento y Reparaciones</a></li>
                         <li><a href="{{ route('trabajadores.index') }}">Trabajadores</a></li>
                         <li><a href="{{ route('catalogo_materiales.index') }}">Catalogo de Materiales</a></li>
+                        <li><a href="{{ route('inventario_materiales.index') }}">Inventario de Materiales</a></li>
                     </ul>
                 </div>
             </div>

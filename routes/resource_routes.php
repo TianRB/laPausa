@@ -29,5 +29,6 @@ Route::prefix('admin')->group(function () {
     'mantenimiento_y_reparaciones' => 'MantenimientoReparacionController',
     'trabajadores' => 'TrabajadorController',
     'catalogo_materiales' => 'CatalogoMaterialController',
+    'inventario_materiales' => 'InventarioMaterialController',
   ]);
 });
