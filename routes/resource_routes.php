@@ -28,5 +28,6 @@ Route::prefix('admin')->group(function () {
     'registro_combustible' => 'RegistroCombustibleController',
     'mantenimiento_y_reparaciones' => 'MantenimientoReparacionController',
     'trabajadores' => 'TrabajadorController',
+    'catalogo_materiales' => 'CatalogoMaterialController',
   ]);
 });

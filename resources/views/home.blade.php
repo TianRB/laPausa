@@ -31,6 +31,7 @@
                         <li><a href="{{ route('registro_combustible.index') }}">Registro Combustible</a></li>
                         <li><a href="{{ route('mantenimiento_y_reparaciones.index') }}">Mantenimiento y Reparaciones</a></li>
                         <li><a href="{{ route('trabajadores.index') }}">Trabajadores</a></li>
+                        <li><a href="{{ route('catalogo_materiales.index') }}">Catalogo de Materiales</a></li>
                     </ul>
                 </div>
             </div>
