@@ -12,10 +12,11 @@
 
         <!-- Styles -->
         <style>
+            @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Source Sans Pro', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -79,7 +80,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    La Pausa
                 </div>
 
                 <div class="links">
