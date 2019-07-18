@@ -97,6 +97,10 @@ html body {
     letter-spacing: .1rem;
 }
 
+#dashboard_navbar{
+    z-index: 1050;
+}
+
 /* Dashboard */
 
 
