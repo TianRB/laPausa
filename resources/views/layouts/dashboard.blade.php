@@ -26,7 +26,7 @@
                 </div>
               </nav>
           
-              <main role="main" class="col-lg-10 bg-5">
+              <main role="main" class="col-lg-10 bg-5 dashboard">
                 @include('layouts.dashboard_navbar')
                  {{-- Content --}}
                 <div class="row justify-content-center py-5">                                 
