@@ -4,18 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
-use App\Models\RegistroCombustible;
-use App\Models\HerramientaMaquinaria;
-use App\Models\Trabajador;
+use App\Models\InventarioMaterial;
 use Validator;
 
-class RegistroCombustibleController extends Controller
+class InventarioMaterialController extends Controller
 {
     
-    private $prefix = 'registro_combustible.'; // Para Rutas
-    private $viewPrefix = 'backend.registroCombustible.'; // Para Vistas
-    private $modelSingular = 'registroCombustible'; // Variable enviada a vistas con un modelo
-    private $modelPlural = 'registrosCombustible'; // Variable enviada a vistas con varios modelos
+    private $prefix = 'inventario_materiales.'; // Para Rutas
+    private $viewPrefix = 'backend.inventarioMateriales.'; // Para Vistas
+    private $modelSingular = 'inventarioMaterial'; // Variable enviada a vistas con un modelo
+    private $modelPlural = 'inventarioMateriales'; // Variable enviada a vistas con varios modelos
     
     public function __construct(){
         $this->middleware('auth');
@@ -27,7 +25,7 @@ class RegistroCombustibleController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function index(){
-        return view($this->viewPrefix.'index', [$this->modelPlural => RegistroCombustible::all()]);
+        return view($this->viewPrefix.'index', [$this->modelPlural => InventarioMaterial::all()]);
     }
     
     /**
@@ -36,7 +34,7 @@ class RegistroCombustibleController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function create(){
-        return view($this->viewPrefix.'create', ['herramientas' => HerramientaMaquinaria::all(), 'trabajadores' => Trabajador::all()]);
+        return view($this->viewPrefix.'create');
     }
     
     /**
@@ -59,7 +57,7 @@ class RegistroCombustibleController extends Controller
             ->withErrors($validator)
             ->withInput();
         } else {
-            $m = new RegistroCombustible;
+            $m = new InventarioMaterial;
             $m->fill($request->all());
             
             $m->save();
@@ -70,28 +68,28 @@ class RegistroCombustibleController extends Controller
     /**
     * Display the specified resource.
     *
-    * @param  \App\RegistroCombustible  $RegistroCombustible
+    * @param  \App\InventarioMaterial  $InventarioMaterial
     * @return \Illuminate\Http\Response
     */
     public function show($id){
-        return view($this->viewPrefix.'show', [$this->modelSingular => RegistroCombustible::find($id)]);
+        return view($this->viewPrefix.'show', [$this->modelSingular => InventarioMaterial::find($id)]);
     }
     
     /**
     * Show the form for editing the specified resource.
     *
-    * @param  \App\RegistroCombustible  $RegistroCombustible
+    * @param  \App\InventarioMaterial  $InventarioMaterial
     * @return \Illuminate\Http\Response
     */
     public function edit($id){
-        return view($this->viewPrefix.'edit', [$this->modelSingular => RegistroCombustible::find($id), 'herramientas' => HerramientaMaquinaria::all(), 'trabajadores' => Trabajador::all()]);
+        return view($this->viewPrefix.'edit', [$this->modelSingular => InventarioMaterial::find($id)]);
     }
     
     /**
     * Update the specified resource in storage.
     *
     * @param  \Illuminate\Http\Request  $request
-    * @param  \App\RegistroCombustible  $RegistroCombustible
+    * @param  \App\InventarioMaterial  $InventarioMaterial
     * @return \Illuminate\Http\Response
     */
     public function update(Request $request, $id){
@@ -100,7 +98,7 @@ class RegistroCombustibleController extends Controller
         $input = $request->all();
         
         $rules = [
-            // 'name' => 'unique:subRegistroCombustible|required|max:255',
+            // 'name' => 'unique:subInventarioMaterial|required|max:255',
         ];
         $validator = Validator::make($input, $rules);
         if ($validator->fails()) {
@@ -108,7 +106,7 @@ class RegistroCombustibleController extends Controller
             ->withErrors($validator)
             ->withInput();
         } else {
-            $m = RegistroCombustible::find($id);
+            $m = InventarioMaterial::find($id);
             $m->update($request->all());
             
             $m->save();
@@ -119,11 +117,11 @@ class RegistroCombustibleController extends Controller
     /**
     * Remove the specified resource from storage.
     *
-    * @param  \App\RegistroCombustible  $RegistroCombustible
+    * @param  \App\InventarioMaterial  $InventarioMaterial
     * @return \Illuminate\Http\Response
     */
     public function destroy($id){
-        $m = RegistroCombustible::find($id);
+        $m = InventarioMaterial::find($id);
         $m->delete();
         return redirect()->route($this->prefix.'index');
     }
