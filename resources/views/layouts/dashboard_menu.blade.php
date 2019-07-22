@@ -26,4 +26,5 @@
     <li class="nav-item"><a class="nav-link" href="{{ route('cat_herr_maq.index') }}">Catalogo Herramienta y Maquinaria</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('herr_maq.index') }}">Herramienta y Maquinaria</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('registro_combustible.index') }}">Registro Combustible</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('registro_materiales.index') }}">Registro Combustible</a></li>
   </ul>
