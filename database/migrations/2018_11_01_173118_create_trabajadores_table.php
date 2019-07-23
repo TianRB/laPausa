@@ -29,7 +29,7 @@ class CreateTrabajadoresTable extends Migration
             $table->string('calle');
             $table->string('poblacion');
             $table->string('telefono');
-            $table->string('celular');
+            $table->string('celular')->nullable();
             $table->string('telefono_emergencia');
             $table->string('parentesco_telefono_emergencia');
             $table->date('fecha_ingreso');
