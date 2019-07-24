@@ -18,11 +18,10 @@ class CreatePlanesTables extends Migration
                   $table->string('name');
                   $table->string('display_name');
                   $table->string('description')->nullable();
-                  $table->string('descripcion')->nullable();
                   $table->string('nombre_pantalla')->nullable();
                   $table->timestamps();
             });
-            
+
             Schema::create('planes', function (Blueprint $table) {
                   $table->increments('id');
                   $table->string('nombre')->nullable();
