@@ -28,4 +28,5 @@
     <li class="nav-item"><a class="nav-link" href="{{ route('registro_combustible.index') }}">Registro Combustible</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('registro_materiales.index') }}">Registro Materiales</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('catalogo_insumos.index') }}">Catalogo de Insumos</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('provision_insumos.index') }}">Provision de Insumos</a></li>
   </ul>
