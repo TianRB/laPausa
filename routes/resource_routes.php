@@ -36,5 +36,6 @@ Route::prefix('admin')->group(function () {
     'registro_procedimientos' => 'RegistroProcedimientoController',
     'tipos_precio' => 'TipoPrecioController',
     'planes' => 'PlanController',
+    'cultivo_planes' => 'CultivoPlanController',
   ]);
 });
