@@ -35,5 +35,6 @@ Route::prefix('admin')->group(function () {
     'provision_insumos' => 'ProvisionInsumoController',
     'registro_procedimientos' => 'RegistroProcedimientoController',
     'tipos_precio' => 'TipoPrecioController',
+    'planes' => 'PlanController',
   ]);
 });

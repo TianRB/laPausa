@@ -31,4 +31,5 @@
     <li class="nav-item"><a class="nav-link" href="{{ route('provision_insumos.index') }}">Provision de Insumos</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('registro_procedimientos.index') }}">Registro de Procedimientos</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('tipos_precio.index') }}">Tipos de Precio</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('planes.index') }}">Planes</a></li>
   </ul>
