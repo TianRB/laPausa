@@ -14,12 +14,12 @@
           </div>
           @endif
           <p>show Tipos de Cultivo</p>
-          <a href=" {{ route('siembra_hongo.index')}} ">index</a>
+          <a href=" {{ route('siembra_hongos.index')}} ">index</a>
           <ul>
             <p>{{ $siembraHongo->display_name }}</p>
-            <a href="{{ route('siembra_hongo.show', $siembraHongo->id) }}">show</a>
-            <a href="{{ route('siembra_hongo.edit', $siembraHongo->id) }}">edit</a>
-            <form action="{{ route('siembra_hongo.destroy', ['id' => $siembraHongo->id]) }}" method="POST" class="no-margin">
+            <a href="{{ route('siembra_hongos.show', $siembraHongo->id) }}">show</a>
+            <a href="{{ route('siembra_hongos.edit', $siembraHongo->id) }}">edit</a>
+            <form action="{{ route('siembra_hongos.destroy', ['id' => $siembraHongo->id]) }}" method="POST" class="no-margin">
               {{ csrf_field() }}
               <input type="hidden" name="_method" value="delete" />
               <button type="submit" class="btn btn-danger"><i class="fa fa-trash">delete</i></button>
