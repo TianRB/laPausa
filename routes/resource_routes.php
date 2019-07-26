@@ -37,5 +37,6 @@ Route::prefix('admin')->group(function () {
     'tipos_precio' => 'TipoPrecioController',
     'planes' => 'PlanController',
     'cultivo_planes' => 'CultivoPlanController',
+    'siembra_hongos' => 'SiembraHongoController',
   ]);
 });

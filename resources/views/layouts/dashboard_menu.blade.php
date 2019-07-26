@@ -33,4 +33,5 @@
     <li class="nav-item"><a class="nav-link" href="{{ route('tipos_precio.index') }}">Tipos de Precio</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('planes.index') }}">Planes</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('cultivo_planes.index') }}">Cultivo Planes</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('siembra_hongos.index') }}">Siembra de Hongos</a></li>
   </ul>
