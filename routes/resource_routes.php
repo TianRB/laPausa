@@ -38,5 +38,6 @@ Route::prefix('admin')->group(function () {
     'planes' => 'PlanController',
     'cultivo_planes' => 'CultivoPlanController',
     'siembra_hongos' => 'SiembraHongoController',
+    'siembra_germinados' => 'SiembraGerminadoController',
   ]);
 });
