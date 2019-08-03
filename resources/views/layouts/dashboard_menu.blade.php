@@ -26,4 +26,13 @@
     <li class="nav-item"><a class="nav-link" href="{{ route('cat_herr_maq.index') }}">Catalogo Herramienta y Maquinaria</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('herr_maq.index') }}">Herramienta y Maquinaria</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ route('registro_combustible.index') }}">Registro Combustible</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('registro_materiales.index') }}">Registro Materiales</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('catalogo_insumos.index') }}">Catalogo de Insumos</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('provision_insumos.index') }}">Provision de Insumos</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('registro_procedimientos.index') }}">Registro de Procedimientos</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('tipos_precio.index') }}">Tipos de Precio</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('planes.index') }}">Planes</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('cultivo_planes.index') }}">Cultivo Planes</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('siembra_hongos.index') }}">Siembra de Hongos</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ route('siembra_germinados.index') }}">Siembra de Germinados</a></li>
   </ul>

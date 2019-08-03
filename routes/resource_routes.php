@@ -30,5 +30,14 @@ Route::prefix('admin')->group(function () {
     'trabajadores' => 'TrabajadorController',
     'catalogo_materiales' => 'CatalogoMaterialController',
     'inventario_materiales' => 'InventarioMaterialController',
+    'registro_materiales' => 'RegistroMaterialController',
+    'catalogo_insumos' => 'CatalogoInsumosController',
+    'provision_insumos' => 'ProvisionInsumoController',
+    'registro_procedimientos' => 'RegistroProcedimientoController',
+    'tipos_precio' => 'TipoPrecioController',
+    'planes' => 'PlanController',
+    'cultivo_planes' => 'CultivoPlanController',
+    'siembra_hongos' => 'SiembraHongoController',
+    'siembra_germinados' => 'SiembraGerminadoController',
   ]);
 });
