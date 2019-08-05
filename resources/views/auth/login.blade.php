@@ -1,12 +1,12 @@
- @extends('layouts.dashboard')
+ @extends('layouts.app')
 
 @section('content')
 <div class="container-fluid">
     <div class="row align-items-center">
-        <div class="col-md-6 p-0">
+        <div class="col-md-5 p-0">
             <img src="{{ asset('img/fondo_inicio.png') }}" class="img-fluid" alt="">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div class="row justify-content-center py-5">
                 <div class="col-6 text-center">
                         <img src="{{ asset('img/logo.png') }}" alt="">

@@ -22,11 +22,14 @@ html body {
     margin: 0;
 }
 
-.lp-login input.form-control{
+.lp-login input.form-control,
+main.dashboard input.form-control
+{
     border: 0;
     border-bottom: 1pt solid #E9E9F0;
 }
-.lp-login input.form-control:focus{
+.lp-login input.form-control:focus,
+main.dashboard input.form-control:focus{
     box-shadow: none;
     background-color: none;
 }
@@ -97,13 +100,14 @@ html body {
     letter-spacing: .1rem;
 }
 
+
 /* Dashboard */
 
 
 .btn.bc-primary{
     background-color:#33792E !important; 
 }
-
+ 
 .btn.bc-bborder{
     background-color:none; 
     color: #636b6f;
