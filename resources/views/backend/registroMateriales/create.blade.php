@@ -1,57 +1,121 @@
 @extends('layouts.dashboard')
 
+@section('page_title')
+Create herramienta y maquinaria
+@endsection
+
+
 @section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="panel panel-default">
-        <div class="panel-heading">Dashboard</div>
-        
-        <div class="panel-body">
-          @if (session('status'))
-          <div class="alert alert-success">
-            {{ session('status') }}
-          </div>
-          @endif
-          <p>Create registro_materiales</p>
-          <a href=" {{ route('registro_materiales.index')}} ">index</a>
-          
-          <form action="{{ route('registro_materiales.store') }}" method="post">
-            {{ csrf_field() }}
-            
-            <label for="material_id">material_id</label>
-            <input type="text" name="material_id" value="{{ old('material_id') }}">
-
-            <label for="area_id">area_id</label>
-            <input type="text" name="area_id" value="{{ old('area_id') }}">
-
-            <label for="trabajador_id">trabajador_id</label>
-            <input type="text" name="trabajador_id" value="{{ old('trabajador_id') }}">
-            
-            <label for="cantidad">cantidad</label>
-            <input type="number" name="cantidad" value="{{ old('cantidad') }}">
-            
-            <label for="unidad_medida">unidad_medida</label>
-            <input type="text" name="unidad_medida" value="{{ old('unidad_medida') }}">
-            
-            <label for="precio_total">precio_total</label>
-            <input type="text" name="precio_total" value="{{ old('precio_total') }}">
-            
-            <label for="precio_unitario">precio_unitario</label>
-            <input type="text" name="precio_unitario" value="{{ old('precio_unitario') }}">
-            
-            <label for="fecha_ingreso">fecha_ingreso</label>
-            <input type="date" name="fecha_ingreso" value="{{ old('fecha_ingreso') }}">
-            
-            <label for="notas">notas</label>
-            <input type="text" name="notas" value="{{ old('notas') }}">
-
-            <input type="submit" value="submit">
-          </form>
-
-        </div>
-      </div>
-    </div>
+@if (session('status'))
+<div class="alert alert-success">
+  {{ session('status') }}
+</div>
+@endif
+<div class="row py-3">
+  <div class="col-12">
+    <h1 class="">@yield('page_title')</h1>
   </div>
 </div>
+<div class="row">
+  <div class="col-6">
+    <form action="{{ route('registro_materiales.store') }}" method="post">
+      <div class="card text-left">
+        <div class="card-body">   
+          <h3 class="card-title">Información básica</h3>  
+          {{ csrf_field() }}
+          <div class="form-group px-4">                      
+            <label for="material_id">material_id</label>
+            <input class="form-control" type="text" name="material_id" value="{{ old('material_id') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          <div class="form-group px-4">
+            <label for="area_id">area_id</label>
+            <input class="form-control" type="text" name="area_id" value="{{ old('area_id') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          <div class="form-group px-4">
+            <label for="trabajador_id">trabajador_id</label>
+            <input class="form-control" type="text" name="trabajador_id" value="{{ old('trabajador_id') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          <div class="form-group px-4">
+            <label for="cantidad">cantidad</label>
+            <input class="form-control" type="number" name="cantidad" value="{{ old('cantidad') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          <div class="form-group px-4">
+            <label for="unidad_medida">unidad_medida</label>
+            <input class="form-control" type="text" name="unidad_medida" value="{{ old('unidad_medida') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          <div class="form-group px-4">
+            <label for="precio_total">precio_total</label>
+            <input class="form-control" type="text" name="precio_total" value="{{ old('precio_total') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          <div class="form-group px-4">
+            <label for="precio_unitario">precio_unitario</label>
+            <input class="form-control" type="text" name="precio_unitario" value="{{ old('precio_unitario') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          <div class="form-group px-4">
+            <label for="fecha_ingreso">fecha_ingreso</label>
+            <input class="form-control" type="date" name="fecha_ingreso" value="{{ old('fecha_ingreso') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          <div class="form-group px-4">
+            <label for="notas">notas</label>
+            <input class="form-control" type="text" name="notas" value="{{ old('notas') }}">
+            @if ($errors->has('notas'))
+            <span class="help-block">
+              <strong>{{ $errors->first('notas') }}</strong>
+            </span>
+            @endif
+          </div>  
+          
+                    
+          
+          
+        </div>
+      </div>
+      <div class="row justify-content-end p-5">
+        <a class="btn bc-bborder btn-lg mr-5" href=" {{ route('registro_materiales.index')}}  ">Volver</a>
+        <input type="submit" class="btn btn-primary btn-lg bc-primary" value="Crear">
+      </div>
+    </form>
+  </div>
+</div>
+
 @endsection

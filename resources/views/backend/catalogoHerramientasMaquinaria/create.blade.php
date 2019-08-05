@@ -78,8 +78,6 @@
             @endif
           </div>
  
-          1
-          
         </div>
       </div>
       <div class="row justify-content-end p-5">
